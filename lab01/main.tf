@@ -16,6 +16,11 @@ resource "azurerm_resource_group" "example" {
   location = "South Africa North"
 }
 
+resource "azurerm_resource_group" "rg_py" {
+  name     = "pylab"
+  location = "South Africa North"  
+}
+
 resource "azurerm_storage_account" "example" {
   name                     = "terraformtf65842"
   resource_group_name      = azurerm_resource_group.example.name
